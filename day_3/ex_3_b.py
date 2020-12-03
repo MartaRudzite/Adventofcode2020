@@ -20,9 +20,10 @@ for idx, slope in enumerate(right):
     trees.append(n_trees)
 
 # print(np.prod(trees))
-# np.prod can't cope :(
+# np.prod can't cope ;(
 out = 1
 for i in trees:
     out *= i
 print(out)
+
 # print(trees)

@@ -1,3 +1,4 @@
+# in_file = 'passports'
 in_file = 'input_4.txt'
 data = [line.rstrip() for line in open(in_file)]
 
@@ -17,25 +18,25 @@ for idx, line in enumerate(data):
             passport.append(item.split(':')[0])
     else:
         # print(passport)
-        length = len(passport)
-        if length>8:
-            print('long passport ???')
-        elif length == 8:
-            n_valid +=1
-        elif length == 7 and ('cid' not in passport):
-            n_valid +=1
-        # if len(passport)>=7:
-        #     check = 0
-        #     for i in check_list:
-        #         if i in passport:
-        #             check += 1
-        #         else:
-        #             print(idx)
-        #             print(passport)
-        #             break
-        #             if check == len(check_list):
-        #                 n_valid += 1
-        #                 # print(passport)
+        # length = len(passport)
+        # if length>8:
+        #     print('long passport ???')
+        # elif length == 8:
+        #     n_valid +=1
+        # elif length == 7 and ('cid' not in passport):
+        #     n_valid +=1
+        if len(passport)>=7:
+            check = 0
+            for i in check_list:
+                if i in passport:
+                    check += 1
+                else:
+                    # print(idx)
+                    # print(passport)
+                    break
+                if check == len(check_list):
+                    n_valid += 1
+                    print(passport)
         passport = []
 
 print(n_valid)

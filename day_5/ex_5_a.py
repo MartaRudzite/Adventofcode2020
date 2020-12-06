@@ -32,6 +32,13 @@ def col(x):
 ids = []
 
 for seat in data:
-    ids.append((row(seat[:7]) * 8) + col(seat[7:]))
+    ids.append(int((row(seat[:7]) * 8) + col(seat[7:])))
 
-print(int(max(ids)))
+# print(int(max(ids)))
+
+ids = sorted(ids)
+
+def find_missing(lst):
+    return [x for x in range(lst[0], lst[-1]+1) if x not in lst]
+
+print(find_missing(ids))

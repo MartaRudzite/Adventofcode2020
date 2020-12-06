@@ -1,4 +1,4 @@
-in_file = 'input_5_test.txt'
+in_file = 'input_5.txt'
 data = [line.rstrip('\n') for line in open(in_file)]
 # print(data)
 
@@ -29,6 +29,9 @@ def col(x):
         # print(min,' ',max)
     return min - 1
 
+ids = []
+
 for seat in data:
-    id = (row(seat[:7]) * 8) + col(seat[7:])
-    print(id)
+    ids.append((row(seat[:7]) * 8) + col(seat[7:]))
+
+print(int(max(ids)))

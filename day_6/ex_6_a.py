@@ -15,7 +15,6 @@ for idx, line in enumerate(data):
     else:
         # print(questions)
         count.append(len(Counter(questions).keys()))
-        # count.append(count_unique(questions))
         # print(count[-1])
         questions = []
 

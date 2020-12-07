@@ -23,9 +23,6 @@ for line in data:
         n += 1
     else:
         count.append(len(questions))
-        # print(questions)
-        # count.append(count_unique(questions))
-        # print(count[-1])
         questions = []
         n = 0
 

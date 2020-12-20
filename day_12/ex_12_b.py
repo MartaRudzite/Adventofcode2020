@@ -3,9 +3,6 @@ in_file = 'input_12.txt'
 
 actions = [line.rstrip() for line in open(in_file)]
 
-turn_R = ['N','E','S','W','N','E','S','W']
-turn_L = ['N','W','S','E','N','W','S','E']
-
 x = 0
 y = 0
 
@@ -40,7 +37,7 @@ for i in actions:
             hold = x_w
             x_w = y_w
             y_w = -hold
-    print(x,' ',y)
-    print(x_w,' ',y_w)
+    # print(x,' ',y)
+    # print(x_w,' ',y_w)
 
 print(abs(x)+abs(y))
